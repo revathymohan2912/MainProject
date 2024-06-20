@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-20T08:11:35 IST" name="Suite" finished-at="2024-06-20T08:12:13 IST" duration-ms="37778">
+    <groups>
+    </groups>
+    <test started-at="2024-06-20T08:11:35 IST" name="Test" finished-at="2024-06-20T08:12:13 IST" duration-ms="37778">
+      <class name="TestCases.QaLegend_TestCases">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:TestCases.QaLegend_TestCases@747ddf94]" started-at="2024-06-20T08:11:35 IST" name="initialization" finished-at="2024-06-20T08:12:12 IST" duration-ms="37711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addNotes()[pri:0, instance:TestCases.QaLegend_TestCases@747ddf94]" started-at="2024-06-20T08:12:12 IST" name="addNotes" finished-at="2024-06-20T08:12:13 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNotes -->
+      </class> <!-- TestCases.QaLegend_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
