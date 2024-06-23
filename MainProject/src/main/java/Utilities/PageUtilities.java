@@ -85,6 +85,35 @@ public class PageUtilities {
 		action.sendKeys(Keys.ENTER);
 		action.build().perform();
 	}
-	
+	public static void escapeKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ESCAPE);
+		action.build().perform();
+	}
+	public static void arrowUpKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ARROW_UP);
+		action.build().perform();
+	}
+	public static void controlKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.CONTROL);
+		action.build().perform();
+	}
+	public static void spaceKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.SPACE);
+		action.build().perform();
+	}
+	public static void backSpaceKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.BACK_SPACE);
+		action.build().perform();
+	}
+	public static void altKeyPress(WebDriver driver) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ALT);
+		action.build().perform();
+	}
 
 }
