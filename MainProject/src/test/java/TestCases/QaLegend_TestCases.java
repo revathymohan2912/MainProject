@@ -34,6 +34,6 @@ public class QaLegend_TestCases extends Base{
 		System.out.println("tc001");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		//loginPage.loginToQaLegend("admin@admin.com", "12345678");
-		login;
+		
 	}
 }
