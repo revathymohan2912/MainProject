@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
-import net.bytebuddy.asm.Advice.This;
 
 public class QaLegendLoginPage {
 	WebDriver driver;
@@ -29,6 +28,7 @@ public class QaLegendLoginPage {
 		PageUtilities.enterText(usernameField, username);
 		PageUtilities.enterText(passwordField, password);
 		PageUtilities.clickOnElement(siginButton);
+		//PageUtilities.clickUsingJavaScriptExecutor(siginButton, driver);
 	}
 	
 }
