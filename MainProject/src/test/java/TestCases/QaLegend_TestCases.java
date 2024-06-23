@@ -24,7 +24,8 @@ public class QaLegend_TestCases extends Base{
 		loginPage = new QaLegendLoginPage(driver);
 		driver.manage().window().maximize();
 		props = new Properties(); //initialize the obj
-		reader = new FileReader("C:\\Users\\AKHIL\\eclipse-workspace\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
+		reader = new FileReader("C:\\Users\\AKHIL\\git\\repositoryMainProj\\MainProject\\src\\main\\resources\\TestData\\New.properties");
+		//reader = new FileReader("C:\\Users\\AKHIL\\eclipse-workspace\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
 		props.load(reader);
 		driver.get(props.getProperty("url"));	//value readed from property file
 		
@@ -35,5 +36,9 @@ public class QaLegend_TestCases extends Base{
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		//loginPage.loginToQaLegend("admin@admin.com", "12345678");
 		
+	}
+	@Test
+	public void LoginNew() {
+		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 	}
 }
