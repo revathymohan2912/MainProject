@@ -7,7 +7,6 @@
         <methods>
           <include name="addNotes"/>
           <include name="initialization"/>
-          <include name="LoginNew"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>
