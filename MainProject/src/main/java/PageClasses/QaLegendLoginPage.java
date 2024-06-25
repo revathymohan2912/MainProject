@@ -9,9 +9,9 @@ import Utilities.PageUtilities;
 
 public class QaLegendLoginPage {
 	WebDriver driver;
-	@FindBy(id = "email")
+	@FindBy(xpath = "//input[@id='email']")
 	WebElement usernameField;
-	@FindBy(id = "password")
+	@FindBy(xpath = "//input[@id='password']")
 	WebElement passwordField;
 	@FindBy(xpath = "//button[text()='Sign in']")
 	WebElement siginButton;

@@ -42,6 +42,7 @@ public class QaLegendDashBoard {
 
 	public void clickOnNotesOption() {
 		PageUtilities.clickOnElement(notesTab);
+		
 	}
 
 }

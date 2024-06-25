@@ -9,7 +9,7 @@ import Utilities.PageUtilities;
 
 public class QaLegendNotesPage {
 	WebDriver driver ;
-	@FindBy(className = "btn btn-default'")
+	@FindBy(xpath = "//div[@class='title-button-group']/a")
 	WebElement addNotesButton;
 	@FindBy(xpath = "//input[@class='form-control notepad-title']")
 	WebElement titleBoxField;
@@ -17,6 +17,8 @@ public class QaLegendNotesPage {
 	WebElement descriptionBoxField;
 	@FindBy(name = "labels")
 	WebElement labelsBoxField;
+	@FindBy(xpath = "//button[text()=' Save']")
+	WebElement saveButton;
 	
 	
 	
@@ -29,7 +31,9 @@ public class QaLegendNotesPage {
 
 	public void addNotes(String title, String description) {
 		PageUtilities.clickOnElement(addNotesButton);
-		PageUtilities.enterText(titleBoxField, description);
+		PageUtilities.enterText(titleBoxField, title);
+		PageUtilities.enterText(descriptionBoxField, description);
+		PageUtilities.clickOnElement(saveButton);
 	}
 
 }
