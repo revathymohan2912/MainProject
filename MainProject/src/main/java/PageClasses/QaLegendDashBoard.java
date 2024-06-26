@@ -32,17 +32,19 @@ public class QaLegendDashBoard {
 	
 	
 	public QaLegendDashBoard(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-
-
-
 	public void clickOnNotesOption() {
 		PageUtilities.clickOnElement(notesTab);
 		
+	}
+	public void clickOnEventsOption() {
+		PageUtilities.clickOnElement(eventTab);
+	}
+	public void clickOnMessagesOption() {
+		PageUtilities.clickOnElement(messageTab);
 	}
 
 }
