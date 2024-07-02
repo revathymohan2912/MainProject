@@ -7,7 +7,7 @@
       <methods>
 		<!--<include name = "addNotes"></include>-->
 		<!--<include name = "addEvents"></include>-->
-		<include name = "composeMessage"></include>
+		<include name = "addClients"></include>
 		
 		<!--<include name = "composeMessage"></include>-->
 	  </methods>
