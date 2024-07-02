@@ -5,8 +5,8 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases">
         <methods>
-          <include name="composeMessage"/>
           <include name="initialization"/>
+          <include name="forgotPasswordLink"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>

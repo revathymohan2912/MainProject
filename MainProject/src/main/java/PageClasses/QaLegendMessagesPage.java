@@ -43,12 +43,9 @@ public class QaLegendMessagesPage {
 	public void composeMessage(String toField, String subjectField, String messageField) {
 		PageUtilities.clickOnElement(composeTab);
 		PageUtilities.clickOnElement(toBox);
-	//	PageUtilities.clickUsingJavaScriptExecutor(toBox, driver);
 		PageUtilities.enterText(toSearchBox, toField);
 		PageUtilities.clickOnElement(senderName);
-		PageUtilities.clickOnElement(subjectBox);
 		PageUtilities.enterText(subjectBox, subjectField);
-		PageUtilities.clickOnElement(writeAmessage);
 		PageUtilities.enterText(writeAmessage, messageField);
 		PageUtilities.clickOnElement(sendButton);
 		

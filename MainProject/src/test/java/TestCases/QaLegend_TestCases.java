@@ -12,9 +12,11 @@ import BaseClass.Base;
 import PageClasses.QaLegendClientsPage;
 import PageClasses.QaLegendDashBoard;
 import PageClasses.QaLegendEventsPage;
+import PageClasses.QaLegendForgotPassword;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendMessagesPage;
 import PageClasses.QaLegendNotesPage;
+import Utilities.WaitUtility;
 
 public class QaLegend_TestCases extends Base{
 	public WebDriver driver;
@@ -28,6 +30,7 @@ public class QaLegend_TestCases extends Base{
 	QaLegendEventsPage eventPage;
 	QaLegendMessagesPage messagePage;
 	QaLegendClientsPage clientPage;
+	QaLegendForgotPassword forgotPasswordPage;
 	
 @BeforeMethod
 	public void initialization() throws Exception {
@@ -46,6 +49,7 @@ public class QaLegend_TestCases extends Base{
 		eventPage = new QaLegendEventsPage(driver);
 		messagePage = new QaLegendMessagesPage(driver);
 		clientPage = new QaLegendClientsPage(driver);
+		forgotPasswordPage = new QaLegendForgotPassword(driver);
 		
 	//	reader = new FileReader("C:\\Users\\AKHIL\\git\\repositoryMainProj\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
 	//	reader = new FileReader("C:\\Users\\AKHIL\\eclipse-workspace\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
@@ -53,9 +57,9 @@ public class QaLegend_TestCases extends Base{
 		
 		
 	}
+	
 	@Test
 	public void addNotes() {
-		System.out.println("tc001");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 	//	loginPage.loginToQaLegend("admin@admin.com", "12345678");
 	//	System.out.println(path);
@@ -68,27 +72,37 @@ public class QaLegend_TestCases extends Base{
 	
 	@Test
 	public void addEvents() {
-		System.out.println("tc002");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnEventsOption();
 		eventPage.addEvents(props.getProperty("eventsTitle"), props.getProperty("eventsDescription"), props.getProperty("eventsLocation"), props.getProperty("eventsStartDate"), props.getProperty("eventsEndDate"));
 	}
 	
+	@Test 
+	public void QaLegendLogin() {
+		 loginPage.loginToQaLegend(props.getProperty("username"),props.getProperty("password")); 
+		 System.out.println("LOGIN SUCCESSFULL");
+	}
+
+	@Test
+	public void forgotPasswordLink() {
+		forgotPasswordPage.forgotPasswordVerification(props.getProperty("username"));
+		String emailSentNotification = props.getProperty("emailSentNotification");
+	//	Assert.assertEquals(forgotPasswordPage.getForgotPasswordStatus(), emailSentNotification);
+		Assert.assertEquals(forgotPasswordPage.getForgotPasswordStatus(), true);
+	}
+	
 	@Test
 	public void composeMessage() {
-		System.out.println("tc003");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnMessagesOption();
 		String messageSubject = props.getProperty("messageSubject")+rand.nextInt(10000);
 		String message = props.getProperty("message")+rand.nextInt(10000);
 		messagePage.composeMessage(props.getProperty("to"), messageSubject, message);
 		messagePage.searchForSendMessage(messageSubject);
-		messagePage.searchForSendMessage(messageSubject);
 		Assert.assertEquals(messagePage.getSendMessage(), messageSubject);
 		}
 	@Test
 	public void addClients() {
-		System.out.println("tc004");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnClientsOption();
 		String nameClientComapany=props.getProperty("clientCompanyName")+rand.nextInt(10000);
@@ -96,6 +110,7 @@ public class QaLegend_TestCases extends Base{
 		clientPage.searchClient(nameClientComapany);
 		Assert.assertEquals(clientPage.getClientCompany(), nameClientComapany);
 	}
+	
 	
 	
 }
