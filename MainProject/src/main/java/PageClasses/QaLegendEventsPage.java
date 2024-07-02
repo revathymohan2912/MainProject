@@ -10,9 +10,12 @@ import Utilities.PageUtilities;
 public class QaLegendEventsPage {
 	
 	WebDriver driver;
+	
 	@FindBy(xpath = "//a[text()=' Add event']")
 	WebElement addEventButton;
-	@FindBy(xpath = "//input[@name='title']")
+//	@FindBy(xpath = "(//input[@class='form-control' and @id='title']")
+//	@FindBy(xpath = "//div[@id='toojwoss']//input[@id='title']")
+	@FindBy(xpath = "//input[contains(@class, 'title')]")
 	WebElement titleBoxEvents;
 	@FindBy(xpath = "//textarea[@name='description']")
 	WebElement descriptionBoxEvents;
@@ -39,13 +42,14 @@ public class QaLegendEventsPage {
 	
 	public void addEvents(String tittle, String description, String location, String startDate, String endDate) {
 		PageUtilities.clickOnElement(addEventButton);
+		PageUtilities.clickUsingJavaScriptExecutor(titleBoxEvents, driver);
 		PageUtilities.enterText(titleBoxEvents, tittle);
 		PageUtilities.enterText(descriptionBoxEvents, description);
 		PageUtilities.enterText(locationBoxEvents, location);
-	//	PageUtilities.clickOnElement(startDateBox);
+		PageUtilities.clickOnElement(startDateBox);
 		PageUtilities.enterText(startDateBox, startDate);
 		PageUtilities.clickOnElement(startTime);
-	//	PageUtilities.clickOnElement(endDateBox);
+		PageUtilities.clickOnElement(endDateBox);
 		PageUtilities.enterText(endDateBox, endDate);
 		PageUtilities.clickOnElement(endTime);
 		PageUtilities.enterText(locationBoxEvents, location);

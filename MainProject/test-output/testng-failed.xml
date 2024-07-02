@@ -5,7 +5,7 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases">
         <methods>
-          <include name="addNotes"/>
+          <include name="composeMessage"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->

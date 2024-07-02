@@ -19,7 +19,7 @@ public class QaLegendNotesPage {
 	WebElement labelsBoxField;
 	@FindBy(xpath = "//button[text()=' Save']")
 	WebElement saveButton;
-	@FindBy(xpath = "//input[@placeholder='Search']")
+	@FindBy(xpath = "//div[@id='note-table_filter']//input")
 	WebElement notesSearchBox;
 	@FindBy(xpath = "(//a[@class='edit'])[1]")
 	WebElement searchTitle;
@@ -39,6 +39,7 @@ public class QaLegendNotesPage {
 		PageUtilities.clickOnElement(saveButton);
 	}
 	public void searchNotes(String title, WebDriver driver) {
+	//	PageUtilities.clickOnElement(notesSearchBox);
 		PageUtilities.clickUsingJavaScriptExecutor(notesSearchBox, driver);
 		PageUtilities.enterText(notesSearchBox, title);
 	}

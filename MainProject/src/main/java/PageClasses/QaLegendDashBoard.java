@@ -43,6 +43,9 @@ public class QaLegendDashBoard {
 	public void clickOnEventsOption() {
 		PageUtilities.clickOnElement(eventTab);
 	}
+	public void clickOnClientsOption() {
+		PageUtilities.clickOnElement(clientTab);
+	}
 	public void clickOnMessagesOption() {
 		PageUtilities.clickOnElement(messageTab);
 	}

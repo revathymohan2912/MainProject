@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-26T20:42:31 IST" name="Suite" finished-at="2024-06-26T20:42:36 IST" duration-ms="5199">
+  <suite started-at="2024-07-02T07:13:33 IST" name="Suite" finished-at="2024-07-02T07:13:45 IST" duration-ms="11581">
     <groups>
     </groups>
-    <test started-at="2024-06-26T20:42:31 IST" name="Test" finished-at="2024-06-26T20:42:36 IST" duration-ms="5199">
+    <test started-at="2024-07-02T07:13:33 IST" name="Test" finished-at="2024-07-02T07:13:45 IST" duration-ms="11581">
       <class name="TestCases.QaLegend_TestCases">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:TestCases.QaLegend_TestCases@7d8995e]" started-at="2024-06-26T20:42:31 IST" name="initialization" finished-at="2024-06-26T20:42:34 IST" duration-ms="2835" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:TestCases.QaLegend_TestCases@130d63be]" started-at="2024-07-02T07:13:34 IST" name="initialization" finished-at="2024-07-02T07:13:40 IST" duration-ms="6527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="addNotes()[pri:0, instance:TestCases.QaLegend_TestCases@7d8995e]" started-at="2024-06-26T20:42:34 IST" name="addNotes" finished-at="2024-06-26T20:42:36 IST" duration-ms="2326" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="composeMessage()[pri:0, instance:TestCases.QaLegend_TestCases@130d63be]" started-at="2024-07-02T07:13:40 IST" name="composeMessage" finished-at="2024-07-02T07:13:45 IST" duration-ms="4981" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.114)
+              <![CDATA[element click intercepted: Element <a href="https://qalegend.com/crm/index.php/messages/sent_items" class="list-group-item">...</a> is not clickable at point (285, 164). Other element would receive the click: <div class="modal in" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModal" aria-hidden="true" style="display: block;">...</div>
+  (Session info: chrome=126.0.6478.127)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e35755f50ef788054267f73876b17599, sendKeysToElement {id=f.AD015C5E57FFA6A6A9DB566352CB261B.d.F54B0CF0B3616B8DCEB58D903902369C.e.71, value=[Ljava.lang.CharSequence;@31024624}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62165/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e35755f50ef788054267f73876b17599)] -> xpath: //input[@placeholder='Search']]
-Session ID: e35755f50ef788054267f73876b17599]]>
+Command: [5a56ffed0519378ae47fdc592cf00f4e, clickElement {id=f.47E363EEBD25CB3A592E2DB57B0E1FE8.d.284BF378F17A163615AB7D357CB31C68.e.119}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62776/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5a56ffed0519378ae47fdc592cf00f4e)] -> xpath: //a[text()='Sent items']]
+Session ID: 5a56ffed0519378ae47fdc592cf00f4e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.114)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://qalegend.com/crm/index.php/messages/sent_items" class="list-group-item">...</a> is not clickable at point (285, 164). Other element would receive the click: <div class="modal in" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModal" aria-hidden="true" style="display: block;">...</div>
+  (Session info: chrome=126.0.6478.127)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e35755f50ef788054267f73876b17599, sendKeysToElement {id=f.AD015C5E57FFA6A6A9DB566352CB261B.d.F54B0CF0B3616B8DCEB58D903902369C.e.71, value=[Ljava.lang.CharSequence;@31024624}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62165/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e35755f50ef788054267f73876b17599)] -> xpath: //input[@placeholder='Search']]
-Session ID: e35755f50ef788054267f73876b17599
+Command: [5a56ffed0519378ae47fdc592cf00f4e, clickElement {id=f.47E363EEBD25CB3A592E2DB57B0E1FE8.d.284BF378F17A163615AB7D357CB31C68.e.119}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62776/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5a56ffed0519378ae47fdc592cf00f4e)] -> xpath: //a[text()='Sent items']]
+Session ID: 5a56ffed0519378ae47fdc592cf00f4e
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,16 +47,16 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
-at Utilities.PageUtilities.enterText(PageUtilities.java:15)
-at PageClasses.QaLegendNotesPage.searchNotes(QaLegendNotesPage.java:43)
-at TestCases.QaLegend_TestCases.addNotes(QaLegend_TestCases.java:62)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at Utilities.PageUtilities.clickOnElement(PageUtilities.java:12)
+at PageClasses.QaLegendMessagesPage.searchForSendMessage(QaLegendMessagesPage.java:58)
+at TestCases.QaLegend_TestCases.composeMessage(QaLegend_TestCases.java:85)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,10 +87,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNotes -->
+        </test-method> <!-- composeMessage -->
       </class> <!-- TestCases.QaLegend_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

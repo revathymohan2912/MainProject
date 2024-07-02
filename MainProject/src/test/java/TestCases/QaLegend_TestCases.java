@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import BaseClass.Base;
+import PageClasses.QaLegendClientsPage;
 import PageClasses.QaLegendDashBoard;
 import PageClasses.QaLegendEventsPage;
 import PageClasses.QaLegendLoginPage;
@@ -26,6 +27,7 @@ public class QaLegend_TestCases extends Base{
 	QaLegendNotesPage notesPage;
 	QaLegendEventsPage eventPage;
 	QaLegendMessagesPage messagePage;
+	QaLegendClientsPage clientPage;
 	
 @BeforeMethod
 	public void initialization() throws Exception {
@@ -43,6 +45,7 @@ public class QaLegend_TestCases extends Base{
 		rand = new Random();
 		eventPage = new QaLegendEventsPage(driver);
 		messagePage = new QaLegendMessagesPage(driver);
+		clientPage = new QaLegendClientsPage(driver);
 		
 	//	reader = new FileReader("C:\\Users\\AKHIL\\git\\repositoryMainProj\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
 	//	reader = new FileReader("C:\\Users\\AKHIL\\eclipse-workspace\\MainProject\\src\\main\\resources\\TestData\\TestData.properties");
@@ -76,6 +79,23 @@ public class QaLegend_TestCases extends Base{
 		System.out.println("tc003");
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnMessagesOption();
-		messagePage.composeMessage(props.getProperty("to"), props.getProperty("subject"), props.getProperty("message"));
+		String messageSubject = props.getProperty("messageSubject")+rand.nextInt(10000);
+		String message = props.getProperty("message")+rand.nextInt(10000);
+		messagePage.composeMessage(props.getProperty("to"), messageSubject, message);
+		messagePage.searchForSendMessage(messageSubject);
+		messagePage.searchForSendMessage(messageSubject);
+		Assert.assertEquals(messagePage.getSendMessage(), messageSubject);
+		}
+	@Test
+	public void addClients() {
+		System.out.println("tc004");
+		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
+		dashBoard.clickOnClientsOption();
+		String nameClientComapany=props.getProperty("clientCompanyName")+rand.nextInt(10000);
+		clientPage.addClient(nameClientComapany);
+		clientPage.searchClient(nameClientComapany);
+		Assert.assertEquals(clientPage.getClientCompany(), nameClientComapany);
 	}
+	
+	
 }

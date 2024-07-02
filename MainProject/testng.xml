@@ -5,8 +5,10 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases"/>
       <methods>
-		<include name = "addNotes"></include>
+		<!--<include name = "addNotes"></include>-->
 		<!--<include name = "addEvents"></include>-->
+		<include name = "composeMessage"></include>
+		
 		<!--<include name = "composeMessage"></include>-->
 	  </methods>
     </classes>
