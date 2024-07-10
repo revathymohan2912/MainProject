@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.DateUtility;
 import Utilities.PageUtilities;
 
 public class QaLegendEventsPage {
@@ -13,9 +14,7 @@ public class QaLegendEventsPage {
 	
 	@FindBy(xpath = "//a[text()=' Add event']")
 	WebElement addEventButton;
-//	@FindBy(xpath = "(//input[@class='form-control' and @id='title']")
-//	@FindBy(xpath = "//div[@id='toojwoss']//input[@id='title']")
-	@FindBy(xpath = "//input[contains(@class, 'title')]")
+	@FindBy(id = "title")
 	WebElement titleBoxEvents;
 	@FindBy(xpath = "//textarea[@name='description']")
 	WebElement descriptionBoxEvents;
@@ -42,7 +41,6 @@ public class QaLegendEventsPage {
 	
 	public void addEvents(String tittle, String description, String location, String startDate, String endDate) {
 		PageUtilities.clickOnElement(addEventButton);
-		PageUtilities.clickUsingJavaScriptExecutor(titleBoxEvents, driver);
 		PageUtilities.enterText(titleBoxEvents, tittle);
 		PageUtilities.enterText(descriptionBoxEvents, description);
 		PageUtilities.enterText(locationBoxEvents, location);
@@ -54,6 +52,13 @@ public class QaLegendEventsPage {
 		PageUtilities.clickOnElement(endTime);
 		PageUtilities.enterText(locationBoxEvents, location);
 		PageUtilities.clickOnElement(saveButtonEvents);
+	}
+	
+	public void addEventCurrentDate(String tittle, String description) {
+		PageUtilities.clickOnElement(addEventButton);
+		PageUtilities.enterText(titleBoxEvents, tittle);
+		PageUtilities.enterText(descriptionBoxEvents, description);
+		PageUtilities.enterText(startDateBox, DateUtility.getCurrentDate());
 	}
 
 }

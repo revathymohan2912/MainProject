@@ -7,7 +7,8 @@ public class ExtentReportNG {
 	static ExtentReports extent;
 	
 	public static ExtentReports getReportObject() {
-		String path = System.getProperty("user.dir")+"\test-output\report.html";
+		String path = System.getProperty("user.dir")+"\\test-output\\report.html";
+	//	String path = "C:\\Users\\AKHIL\\git\\repositoryMainProj\\MainProject\\test-output\\report.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("Web Automation Report");
 		reporter.config().setDocumentTitle("Test Results");

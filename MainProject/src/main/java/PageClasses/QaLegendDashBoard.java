@@ -19,6 +19,8 @@ public class QaLegendDashBoard {
 	WebElement clientTab;
 	@FindBy(xpath = "//span[text()='Projects']")
 	WebElement projectsTab;
+	@FindBy(xpath = "//span[text()='All Projects']")
+	WebElement allProjectsTab;
 	@FindBy(xpath = "//span[text()='Estimates']")
 	WebElement estimatesTab;
 	@FindBy(xpath = "//span[text()='Invoices']")
@@ -27,6 +29,15 @@ public class QaLegendDashBoard {
 	WebElement itemsTab;
 	@FindBy(xpath = "//span[text()='Leave']")
 	WebElement leaveTab;
+	
+	
+	
+	
+	@FindBy(xpath = "//div[@class='widget-details']//h1")
+	WebElement noOfMyOpenTasks;
+	@FindBy(xpath = "(//div[@class='panel-body ']//h1)[4]")
+	WebElement noOfMyOpenProjects;
+	
 	
 	
 	
@@ -48,6 +59,32 @@ public class QaLegendDashBoard {
 	}
 	public void clickOnMessagesOption() {
 		PageUtilities.clickOnElement(messageTab);
+	}
+	
+	public void clickOnLeaveOption() {
+		PageUtilities.clickOnElement(leaveTab);
+	}
+	
+	public void getMyOpenTasks() {
+		PageUtilities.getElementText(noOfMyOpenTasks);
+	}
+	
+	public String getTheNo() {
+		String no = PageUtilities.getElementText(noOfMyOpenTasks);
+		return no;
+	}
+	
+	public String getMyOpenProjects() {
+		String openProj = PageUtilities.getElementText(noOfMyOpenProjects);
+		return openProj;
+	}
+	
+	public void clickOnProjectsOption() {
+		PageUtilities.clickOnElement(projectsTab);
+	}
+	
+	public void clickOnAllProjectsOption() {
+		PageUtilities.clickOnElement(allProjectsTab);
 	}
 
 }

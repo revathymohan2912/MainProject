@@ -25,12 +25,14 @@ public class QaLegendMessagesPage {
 	WebElement sendButton;
 	@FindBy(xpath = "//textarea[@name='message']")
 	WebElement writeAmessage;
-	@FindBy(xpath = "//input[@id='search-messages']")
-	WebElement searchSendMessage;
 	@FindBy(xpath = "//a[text()='Sent items']")
 	WebElement sendItemsMenu;
-	@FindBy(xpath = "(//div[@class='pull-left message-row ']//div)[3]")
+	@FindBy(xpath = "//input[@id='search-messages']")
+	WebElement searchSendMessage;
+	@FindBy(xpath = "//div[@class='media-heading']")
 	WebElement messageSent;
+	@FindBy(xpath = "(//div[@id='message-details-section']//p)[2]")
+	WebElement message;
 	
 	
 	
@@ -52,12 +54,15 @@ public class QaLegendMessagesPage {
 	}
 	
 	public void searchForSendMessage(String sub) {
-		PageUtilities.clickOnElement(sendItemsMenu);
-		PageUtilities.clickOnElement(searchSendMessage);
+		
+	//	PageUtilities.clickOnElement(sendItemsMenu);
+		PageUtilities.clickUsingJavaScriptExecutor(sendItemsMenu, driver);
+	//	PageUtilities.clickOnElement(searchSendMessage);
 		PageUtilities.enterText(searchSendMessage, sub);
 	}
 	public String getSendMessage() {
-		String getmessage=PageUtilities.getElementText(messageSent);
+		PageUtilities.clickOnElement(messageSent);
+		String getmessage=PageUtilities.getElementText(message);
 		return getmessage;
 	
 	}
