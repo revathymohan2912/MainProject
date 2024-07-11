@@ -6,13 +6,14 @@
 	</listeners>
 	<test thread-count="5" name="Test">
     <classes>
-      <class name="TestCases.QaLegend_TestCases"/>
+      <class name="TestCases.QaLegend_TestCases">
       <methods>
 		<!--<include name = "addNotes"></include>-->
 		<!--<include name = "addEvents"></include>-->
 		<!--<include name = "forgotPasswordLink"></include>-->
 		<include name = "addNotes"></include>
 	  </methods>
+	  </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
