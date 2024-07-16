@@ -54,17 +54,13 @@ public class QaLegendMessagesPage {
 	}
 	
 	public void searchForSendMessage(String sub) {
-		
-	//	PageUtilities.clickOnElement(sendItemsMenu);
 		PageUtilities.clickUsingJavaScriptExecutor(sendItemsMenu, driver);
-	//	PageUtilities.clickOnElement(searchSendMessage);
 		PageUtilities.enterText(searchSendMessage, sub);
 	}
 	public String getSendMessage() {
 		PageUtilities.clickOnElement(messageSent);
 		String getmessage=PageUtilities.getElementText(message);
 		return getmessage;
-	
 	}
 
 }

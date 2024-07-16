@@ -29,8 +29,12 @@ public class QaLegendDashBoard {
 	WebElement itemsTab;
 	@FindBy(xpath = "//span[text()='Leave']")
 	WebElement leaveTab;
-	
-	
+	@FindBy(xpath = "//span[text()='Finance']")
+	WebElement financeTab;
+	@FindBy(xpath = "//span[text()='Expenses']")
+	WebElement expensesTab;
+	@FindBy(xpath = "//span[text()='Tickets']")
+	WebElement ticketsTab;
 	
 	
 	@FindBy(xpath = "//div[@class='widget-details']//h1")
@@ -86,5 +90,16 @@ public class QaLegendDashBoard {
 	public void clickOnAllProjectsOption() {
 		PageUtilities.clickOnElement(allProjectsTab);
 	}
-
+	
+	public void clickOnFinanceOption() {
+		PageUtilities.clickOnElement(financeTab);
+	}
+	
+	public void clickOnExpenses() {
+		PageUtilities.clickOnElement(expensesTab);
+	}
+	
+	public void clickOnTickets() {
+		PageUtilities.clickOnElement(ticketsTab);
+	}
 }

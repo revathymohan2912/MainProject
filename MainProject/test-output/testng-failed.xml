@@ -8,7 +8,7 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases">
         <methods>
-          <include name="addNotes"/>
+          <include name="addProject"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->

@@ -41,7 +41,8 @@ public class QaLegendNotesPage {
 		PageUtilities.clickOnElement(saveButton);
 	}
 	
-	public void searchNotes(String title) {
+	public void searchNotes(String title) throws InterruptedException {
+		Thread.sleep(3000);
 	//	PageUtilities.clickOnElement(notesSearchBox);
 		PageUtilities.clickUsingJavaScriptExecutor(notesSearchBox, driver);
 		PageUtilities.enterText(notesSearchBox, title);

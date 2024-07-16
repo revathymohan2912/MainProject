@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,45 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  3 skipped,  </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addNotes">addNotes</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addNotes">addNotes</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addTicket1(Ticket 2, revathy, Description 2)">addTicket1(Ticket 2, revathy, Description 2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addNotes">addNotes</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addTicket1(Ticket 1, revathy, Description 1)">addTicket1(Ticket 1, revathy, Description 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addNotes">addNotes</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -142,154 +123,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">TestCases.QaLegend_TestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addNotes">
-                  </a> <!-- addNotes -->
-                  <span class="method-name">addNotes</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1037d164ba2641251009256e8a90be2f, sendKeysToElement {value=[Ljava.lang.CharSequence;@51e0301d, id=f.C421E335ECB6808F63D1799B44F10DF7.d.9C13F912D7EDD1FC0DD6975B05E7577E.e.59}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52358}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52358/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1037d164ba2641251009256e8a90be2f)] -&gt; xpath: //div[@id=&apos;note-table_filter&apos;]//input]
-Session ID: 1037d164ba2641251009256e8a90be2f
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
-	at Utilities.PageUtilities.enterText(PageUtilities.java:15)
-	at PageClasses.QaLegendNotesPage.searchNotes(QaLegendNotesPage.java:47)
-	at TestCases.QaLegend_TestCases.addNotes(QaLegend_TestCases.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
+                  <a name="addTicket1(Ticket 2, revathy, Description 2)">
+                  </a> <!-- addTicket1(Ticket 2, revathy, Description 2) -->
+                  <span class="method-name">addTicket1</span>
+                  <span class="parameters">(Ticket 2,revathy,Description 2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addTicket1(Ticket 1, revathy, Description 1)">
+                  </a> <!-- addTicket1(Ticket 1, revathy, Description 1) -->
+                  <span class="method-name">addTicket1</span>
+                  <span class="parameters">(Ticket 1,revathy,Description 1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">TestCases.QaLegend_TestCases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addNotes">
-                  </a> <!-- addNotes -->
-                  <span class="method-name">addNotes</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; title=&quot;Add note&quot; data-act=&quot;ajax-modal&quot; data-title=&quot;Add note&quot; data-action-url=&quot;https://qalegend.com/crm/index.php/notes/modal_form&quot;&gt;...&lt;/a&gt; is not clickable at point (1445, 96). Other element would receive the click: &lt;div id=&quot;pre-loader&quot; style=&quot;opacity: 1;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=126.0.6478.127)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [88c0e8719e0dddf6ec927f991be28ae6, clickElement {id=f.19A4F295C9F4E0AD1A0BFDE3B6E15526.d.6FDF2F789F497A90295866800C7950C6.e.19}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52325}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52325/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (88c0e8719e0dddf6ec927f991be28ae6)] -&gt; xpath: //div[@class=&apos;title-button-group&apos;]/a]
-Session ID: 88c0e8719e0dddf6ec927f991be28ae6
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
-	at Utilities.PageUtilities.clickOnElement(PageUtilities.java:12)
-	at PageClasses.QaLegendNotesPage.addNotes(QaLegendNotesPage.java:38)
-	at TestCases.QaLegend_TestCases.addNotes(QaLegend_TestCases.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addNotes">
-                  </a> <!-- addNotes -->
-                  <span class="method-name">addNotes</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afdf43080eec23872ceba256da488c5c, sendKeysToElement {value=[Ljava.lang.CharSequence;@3e2fc448, id=f.C9DC127825C2A96910889962234893AE.d.99C4EE957FDC02F5B693C6C4C0BAB535.e.76}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52283}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52283/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (afdf43080eec23872ceba256da488c5c)] -&gt; xpath: //div[@id=&apos;note-table_filter&apos;]//input]
-Session ID: afdf43080eec23872ceba256da488c5c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
-	at Utilities.PageUtilities.enterText(PageUtilities.java:15)
-	at PageClasses.QaLegendNotesPage.searchNotes(QaLegendNotesPage.java:47)
-	at TestCases.QaLegend_TestCases.addNotes(QaLegend_TestCases.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addNotes">
-                  </a> <!-- addNotes -->
-                  <span class="method-name">addNotes</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fbaa9507bcdc4862047afc66be4ddac, sendKeysToElement {value=[Ljava.lang.CharSequence;@304b9f1a, id=f.6F412B35D7670940C2F45B898284C39E.d.3C840143CF48066712647CC8CE333B24.e.74}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\AKHIL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52301/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1fbaa9507bcdc4862047afc66be4ddac)] -&gt; xpath: //div[@id=&apos;note-table_filter&apos;]//input]
-Session ID: 1fbaa9507bcdc4862047afc66be4ddac
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
-	at Utilities.PageUtilities.enterText(PageUtilities.java:15)
-	at PageClasses.QaLegendNotesPage.searchNotes(QaLegendNotesPage.java:47)
-	at TestCases.QaLegend_TestCases.addNotes(QaLegend_TestCases.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -307,7 +164,7 @@ Session ID: 1fbaa9507bcdc4862047afc66be4ddac
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.QaLegend_TestCases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;addNotes&quot;/&gt;
+          &lt;include name=&quot;addTicket1&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestCases.QaLegend_TestCases --&gt;
     &lt;/classes&gt;
@@ -349,28 +206,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addNotes')
+data.setCell(0, 1, 'addTicket1')
 data.setCell(0, 2, 'TestCases.QaLegend_TestCases')
-data.setCell(0, 3, 14078);
+data.setCell(0, 3, 8648);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addNotes')
+data.setCell(1, 1, 'addTicket1')
 data.setCell(1, 2, 'TestCases.QaLegend_TestCases')
-data.setCell(1, 3, 4372);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addNotes')
-data.setCell(2, 2, 'TestCases.QaLegend_TestCases')
-data.setCell(2, 3, 3861);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addNotes')
-data.setCell(3, 2, 'TestCases.QaLegend_TestCases')
-data.setCell(3, 3, 3718);
+data.setCell(1, 3, 7787);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -391,29 +240,29 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestCases.QaLegend_TestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">searchNotes</span>
+                <span class="ignored-method-name">addClients</span>
                 <br/>
-                <span class="ignored-method-name">addProject</span>
-                <br/>
-                <span class="ignored-method-name">addEventForToday</span>
-                <br/>
-                <span class="ignored-method-name">dashBoard_Checking_OpenProjects</span>
-                <br/>
-                <span class="ignored-method-name">checking_Leave_Summary</span>
+                <span class="ignored-method-name">addExpense</span>
                 <br/>
                 <span class="ignored-method-name">addEvents</span>
                 <br/>
-                <span class="ignored-method-name">dashBoard_Checking_MyOpenTasks</span>
-                <br/>
                 <span class="ignored-method-name">applyLeave</span>
                 <br/>
-                <span class="ignored-method-name">forgotPasswordLink</span>
+                <span class="ignored-method-name">addTicket</span>
+                <br/>
+                <span class="ignored-method-name">searchNotes</span>
+                <br/>
+                <span class="ignored-method-name">QaLegendLogin</span>
                 <br/>
                 <span class="ignored-method-name">composeMessage</span>
                 <br/>
-                <span class="ignored-method-name">addClients</span>
+                <span class="ignored-method-name">addProject</span>
                 <br/>
-                <span class="ignored-method-name">QaLegendLogin</span>
+                <span class="ignored-method-name">addNotes</span>
+                <br/>
+                <span class="ignored-method-name">forgotPasswordLink</span>
+                <br/>
+                <span class="ignored-method-name">assignLeave</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -431,34 +280,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addNotes</span>
-                <span class="method-start">17689 ms</span>
+                <span class="method-name">addTicket1(Ticket 1, revathy, Description 1)</span>
+                <span class="method-start">2586 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initialization</span>
-                <span class="method-start">21562 ms</span>
+                <span class="method-start">10389 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addNotes</span>
-                <span class="method-start">29613 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initialization</span>
-                <span class="method-start">33336 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">addNotes</span>
-                <span class="method-start">40239 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initialization</span>
-                <span class="method-start">54323 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">addNotes</span>
-                <span class="method-start">67300 ms</span>
+                <span class="method-name">addTicket1(Ticket 2, revathy, Description 2)</span>
+                <span class="method-start">12753 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

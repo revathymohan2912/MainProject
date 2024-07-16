@@ -14,6 +14,9 @@ public class PageUtilities {
 	public static void enterText(WebElement element, String value) {
 		element.sendKeys(value);
 	}
+	public static void enterNumeric(WebElement element, CharSequence[] value) {
+		element.sendKeys(value);
+	}
 	public static String getElementText(WebElement element) {
 		return(element.getText());
 	}

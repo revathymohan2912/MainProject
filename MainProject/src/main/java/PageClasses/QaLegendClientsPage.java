@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendClientsPage {
 	
@@ -15,7 +16,7 @@ public class QaLegendClientsPage {
 	WebElement addClientButton;
 	@FindBy(xpath = "//input[@name='company_name']")
 	WebElement companyNameBox;
-	@FindBy(xpath = "//span[@class='fa fa-check-circle']")
+	@FindBy(xpath = "//button[text()=' Save']")
 	WebElement clientSaveButton;
 	@FindBy(xpath = "//div[@id='client-table_filter']//input")
 	WebElement clientSearch;
@@ -34,11 +35,14 @@ public class QaLegendClientsPage {
 
 
 	public void addClient(String companyname) {
+		WaitUtility.waitForAnElementToBeVisible(driver, addClientButton);
 		PageUtilities.clickOnElement(addClientButton);
 		PageUtilities.enterText(companyNameBox, companyname);
 		PageUtilities.clickOnElement(clientSaveButton);
 	}
-	public void searchClient(String searchname) {
+	public void searchClient(String searchname) throws InterruptedException {
+		Thread.sleep(5000);
+		//WaitUtility.waitForAnElementToBeVisible(driver, clientSearch);
 		PageUtilities.clickOnElement(clientSearch);
 		PageUtilities.enterText(clientSearch, searchname);
 	}

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 	public static final long EXPLICIT_WAIT = 5;
-	public static void waitForElementToBeCLicked(WebDriver driver, WebElement target) {
+	public static void waitForElementToBeClicked(WebDriver driver, WebElement target) {
 	WebDriverWait wait	= new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 	wait.until(ExpectedConditions.elementToBeClickable(target));
 	}

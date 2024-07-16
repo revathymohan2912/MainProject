@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<!--<groups>
+		<run>
+			<include name ="SmokeTest"></include>
+			<include name ="RegressionTest"></include>
+		</run>
+	</groups>-->
 	<listeners>
 		<listener class-name="TestCases.Listeners"></listener>
 	</listeners>
@@ -8,10 +14,20 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases">
       <methods>
-		<!--<include name = "addNotes"></include>-->
-		<!--<include name = "addEvents"></include>-->
+		<!--<include name = "QaLegendLogin"></include>-->
 		<!--<include name = "forgotPasswordLink"></include>-->
-		<include name = "addNotes"></include>
+		<!--<include name = "addNotes"></include>-->
+		<!--<include name = "searchNotes"></include>-->
+		<!--<include name = "addEvents"></include>-->
+		<!--<include name = "composeMessage"></include>-->
+		<!--<include name = "addClients"></include>-->
+		<!--<include name = "addProject"></include>-->
+		<!--<include name = "applyLeave"></include>-->
+		<!--<include name = "assignLeave"></include>-->
+		<!--<include name = "addExpense"></include>-->
+		<!--<include name = "addTicket"></include>-->
+		<include name = "addTicket1"></include>
+		
 	  </methods>
 	  </class>
     </classes>
