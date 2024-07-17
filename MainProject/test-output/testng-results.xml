@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-17T20:21:16 IST" name="Suite" finished-at="2024-07-17T20:21:45 IST" duration-ms="28935">
+  <suite started-at="2024-07-17T21:34:29 IST" name="Suite" finished-at="2024-07-17T21:34:42 IST" duration-ms="12425">
     <groups>
     </groups>
-    <test started-at="2024-07-17T20:21:16 IST" name="Test" finished-at="2024-07-17T20:21:45 IST" duration-ms="28935">
+    <test started-at="2024-07-17T21:34:29 IST" name="Test" finished-at="2024-07-17T21:34:42 IST" duration-ms="12425">
       <class name="TestCases.QaLegend_TestCases">
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@21282ed8]" started-at="2024-07-17T20:21:16 IST" name="initialization" finished-at="2024-07-17T20:21:35 IST" duration-ms="18896" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@32502377]" started-at="2024-07-17T21:34:30 IST" name="initialization" finished-at="2024-07-17T21:34:33 IST" duration-ms="3809" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="addTicket()[pri:0, instance:TestCases.QaLegend_TestCases@21282ed8]" started-at="2024-07-17T20:21:35 IST" name="addTicket" finished-at="2024-07-17T20:21:44 IST" duration-ms="9666" status="PASS">
+        <test-method signature="addTicket()[pri:0, instance:TestCases.QaLegend_TestCases@32502377]" started-at="2024-07-17T21:34:33 IST" name="addTicket" finished-at="2024-07-17T21:34:42 IST" duration-ms="8422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTicket -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QaLegend_TestCases@21282ed8]" started-at="2024-07-17T20:21:44 IST" name="tearDown" finished-at="2024-07-17T20:21:45 IST" duration-ms="303" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QaLegend_TestCases@32502377]" started-at="2024-07-17T21:34:42 IST" name="tearDown" finished-at="2024-07-17T21:34:42 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

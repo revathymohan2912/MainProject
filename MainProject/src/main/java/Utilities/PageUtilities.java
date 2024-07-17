@@ -118,5 +118,8 @@ public class PageUtilities {
 		action.sendKeys(Keys.ALT);
 		action.build().perform();
 	}
+	public static void windowMaximize(WebDriver driver) {
+		driver.manage().window().maximize();
+	}
 
 }

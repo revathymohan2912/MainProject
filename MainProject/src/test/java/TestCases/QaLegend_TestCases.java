@@ -29,6 +29,7 @@ import PageClasses.QaLegendNotesPage;
 import PageClasses.QaLegendTicketsPage;
 import Utilities.ExcelUtility;
 import Utilities.MyRetry;
+import Utilities.PageUtilities;
 import Utilities.WaitUtility;
 
 public class QaLegend_TestCases extends Base{
@@ -53,12 +54,14 @@ public class QaLegend_TestCases extends Base{
 	public void initialization(String browser) throws Exception {
 		
 		driver = browzerInitialization(browser);
+		
 		props = new Properties();		
 		path = System.getProperty("user.dir") + "\\src\\main\\resources\\TestData\\TestData.properties";
 		reader = new FileReader(path);
 		props.load(reader);
 		driver.get(props.getProperty("url"));
-		driver.manage().window().maximize();
+		PageUtilities.windowMaximize(driver);
+		
 		loginPage = new QaLegendLoginPage(driver);
 		dashBoard = new QaLegendDashBoard(driver);
 		notesPage = new QaLegendNotesPage(driver);
