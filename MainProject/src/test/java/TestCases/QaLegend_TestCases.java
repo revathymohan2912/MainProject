@@ -76,7 +76,7 @@ public class QaLegend_TestCases extends Base{
 	}
 
 
-	@Test(retryAnalyzer = MyRetry.class, groups = {"RegressionTest"})
+@Test(retryAnalyzer = MyRetry.class, groups = {"RegressionTest"})
 	public void addNotes() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnNotesOption();
@@ -86,7 +86,7 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(notesPage.getNotesTitle(), noteTitle);
 		}
 	
-	@Test(retryAnalyzer = MyRetry.class)
+@Test(retryAnalyzer = MyRetry.class)
 	public void composeMessage() throws IOException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnMessagesOption();
@@ -97,7 +97,7 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(messagePage.getSendMessage(), message);
 		}
 
-	@Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
+@Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
 	public void searchNotes() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnNotesOption();
@@ -107,7 +107,7 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(notesPage.getNotesTitle(), noteTitle);
 	}
 	
-	@Test(retryAnalyzer = MyRetry.class)
+@Test(retryAnalyzer = MyRetry.class)
 	public void addClients() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnClientsOption();
@@ -118,7 +118,7 @@ public class QaLegend_TestCases extends Base{
 	}
 	
 	
-	@Test
+@Test(retryAnalyzer = MyRetry.class)
 	public void addExpense() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnFinanceOption();
@@ -129,7 +129,7 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(expensePage.getExpense(), expenseTitle);
 	}
 	
-	@Test
+@Test(retryAnalyzer = MyRetry.class)
 	public void addTicket() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnTickets();
@@ -139,7 +139,7 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
 	}
 	
-	@Test(dataProvider = "myTickets")
+@Test(retryAnalyzer = MyRetry.class, dataProvider = "myTickets")
 	public void addTicket1(String ticketTitle, String ticketClient, String ticketDescription) throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnTickets();
@@ -147,7 +147,7 @@ public class QaLegend_TestCases extends Base{
 		ticketsPage.searchTicket(ticketTitle);
 		Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
 	}
-	@DataProvider(name = "myTickets")
+@DataProvider(name = "myTickets")
 	public Object[][] testData(){
 		Object[][] newData = new Object[2][3];
 		newData[0][0] = "Ticket 1";
