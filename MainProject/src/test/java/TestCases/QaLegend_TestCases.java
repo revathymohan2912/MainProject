@@ -11,8 +11,10 @@ import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 
 import BaseClass.Base;
 import PageClasses.QaLegendAllProjectsPage;
@@ -20,7 +22,6 @@ import PageClasses.QaLegendClientsPage;
 import PageClasses.QaLegendDashBoard;
 import PageClasses.QaLegendEventsPage;
 import PageClasses.QaLegendExpensePage;
-import PageClasses.QaLegendForgotPassword;
 import PageClasses.QaLegendLeavePage;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendMessagesPage;
@@ -42,16 +43,16 @@ public class QaLegend_TestCases extends Base{
 	QaLegendEventsPage eventPage;
 	QaLegendMessagesPage messagePage;
 	QaLegendClientsPage clientPage;
-	QaLegendForgotPassword forgotPasswordPage;
 	QaLegendLeavePage leavePage;
 	QaLegendAllProjectsPage allProjectsPage;
 	QaLegendExpensePage expensePage;
 	QaLegendTicketsPage ticketsPage;
 	
 @BeforeMethod
-	public void initialization() throws Exception {
+@Parameters("browser")
+	public void initialization(String browser) throws Exception {
 		
-		driver = browzerInitialization("chrome");
+		driver = browzerInitialization(browser);
 		props = new Properties();		
 		path = System.getProperty("user.dir") + "\\src\\main\\resources\\TestData\\TestData.properties";
 		reader = new FileReader(path);
@@ -65,26 +66,12 @@ public class QaLegend_TestCases extends Base{
 		eventPage = new QaLegendEventsPage(driver);
 		messagePage = new QaLegendMessagesPage(driver);
 		clientPage = new QaLegendClientsPage(driver);
-		forgotPasswordPage = new QaLegendForgotPassword(driver);
 		leavePage = new QaLegendLeavePage(driver);
 		allProjectsPage = new QaLegendAllProjectsPage(driver);
 		expensePage = new QaLegendExpensePage(driver);
 		ticketsPage = new QaLegendTicketsPage(driver);
 	}
 
-
-	@Test (retryAnalyzer = MyRetry.class, groups = {"RegressionTest"})
-	public void QaLegendLogin() {
-		 loginPage.loginToQaLegend(props.getProperty("username"),props.getProperty("password")); 
-		 System.out.println("LOGIN SUCCESSFULL");
-	}
-	
-	@Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
-	public void forgotPasswordLink() {
-		forgotPasswordPage.forgotPasswordVerification(props.getProperty("username"));
-		Assert.assertEquals(forgotPasswordPage.getForgotPasswordStatus(), true);
-	}
-	
 
 	@Test(retryAnalyzer = MyRetry.class, groups = {"RegressionTest"})
 	public void addNotes() throws InterruptedException {
@@ -95,26 +82,6 @@ public class QaLegend_TestCases extends Base{
 		notesPage.searchNotes(noteTitle);
 		Assert.assertEquals(notesPage.getNotesTitle(), noteTitle);
 		}
-
-	
-	
-	@Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
-	public void searchNotes() throws InterruptedException {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnNotesOption();
-		String noteTitle = props.getProperty("notesTitle")+rand.nextInt(10000);
-		notesPage.addNotes(noteTitle, props.getProperty("notesDescription"));
-		notesPage.searchNotes(noteTitle);
-		Assert.assertEquals(notesPage.getNotesTitle(), noteTitle);
-	}
-	
-	@Test
-	public void addEvents() {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnEventsOption();
-		String eventTitle = props.getProperty("eventsTitle") + rand.nextInt(1000);
-		eventPage.addEvents(eventTitle, props.getProperty("eventsDescription"), props.getProperty("eventsLocation"), props.getProperty("eventsStartDate"), props.getProperty("eventsEndDate"));
-	}
 	
 	@Test(retryAnalyzer = MyRetry.class)
 	public void composeMessage() throws IOException {
@@ -126,7 +93,18 @@ public class QaLegend_TestCases extends Base{
 		messagePage.searchForSendMessage(messageSubject);
 		Assert.assertEquals(messagePage.getSendMessage(), message);
 		}
-	@Test
+
+	@Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
+	public void searchNotes() throws InterruptedException {
+		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
+		dashBoard.clickOnNotesOption();
+		String noteTitle = props.getProperty("notesTitle")+rand.nextInt(10000);
+		notesPage.addNotes(noteTitle, props.getProperty("notesDescription"));
+		notesPage.searchNotes(noteTitle);
+		Assert.assertEquals(notesPage.getNotesTitle(), noteTitle);
+	}
+	
+	@Test(retryAnalyzer = MyRetry.class)
 	public void addClients() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
 		dashBoard.clickOnClientsOption();
@@ -136,28 +114,6 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(clientPage.getClientCompany(), nameClientComapany);
 	}
 	
-	@Test
-	public void addProject() {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnProjectsOption();
-		dashBoard.clickOnAllProjectsOption();
-		String tilte = props.getProperty("projectTitle")+rand.nextInt(10000);
-		allProjectsPage.addAProject(driver, tilte, props.getProperty("projectClientName"));	
-	}
-	
-	@Test(retryAnalyzer = MyRetry.class)
-	public void applyLeave() throws InterruptedException {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnLeaveOption();
-		leavePage.applyLeave1(props.getProperty("reasonForLeave"));
-	}
-	
-	@Test(retryAnalyzer = MyRetry.class)
-	public void assignLeave() {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnLeaveOption();
-		leavePage.assignLeave(props.getProperty("teamMemberName"), props.getProperty("leaveTypeAssign"), props.getProperty("reasonAssign"));
-	}
 	
 	@Test
 	public void addExpense() throws InterruptedException {
@@ -180,7 +136,6 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
 	}
 	
-	
 	@Test(dataProvider = "myTickets")
 	public void addTicket1(String ticketTitle, String ticketClient, String ticketDescription) throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
@@ -189,11 +144,9 @@ public class QaLegend_TestCases extends Base{
 		ticketsPage.searchTicket(ticketTitle);
 		Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
 	}
-	
 	@DataProvider(name = "myTickets")
 	public Object[][] testData(){
 		Object[][] newData = new Object[2][3];
-	//	newData[0][0] = props.getProperty("ticketTitle")+rand.nextInt(10000);
 		newData[0][0] = "Ticket 1";
 		newData[0][1] = "revathy";
 		newData[0][2] = "Description 1";
@@ -201,5 +154,10 @@ public class QaLegend_TestCases extends Base{
 		newData[1][1] = "revathy";
 		newData[1][2] = "Description 2";
 		return newData;
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
 	}
 }

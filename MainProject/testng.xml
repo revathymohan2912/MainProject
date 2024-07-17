@@ -10,7 +10,8 @@
 	<listeners>
 		<listener class-name="TestCases.Listeners"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test thread-count="2" name="Test"  parallel="methods">
+	<parameter name = "browser" value = "chrome"></parameter>
     <classes>
       <class name="TestCases.QaLegend_TestCases">
       <methods>
@@ -25,8 +26,8 @@
 		<!--<include name = "applyLeave"></include>-->
 		<!--<include name = "assignLeave"></include>-->
 		<!--<include name = "addExpense"></include>-->
-		<!--<include name = "addTicket"></include>-->
-		<include name = "addTicket1"></include>
+		<include name = "addTicket"></include>
+		<!--<include name = "addTicket1"></include>-->
 		
 	  </methods>
 	  </class>

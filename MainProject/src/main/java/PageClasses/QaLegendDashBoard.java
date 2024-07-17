@@ -9,6 +9,7 @@ import Utilities.PageUtilities;
 
 public class QaLegendDashBoard {
 	WebDriver driver;
+	
 	@FindBy(xpath = "//span[text()='Events']")
 	WebElement eventTab;
 	@FindBy(xpath = "//span[text()='Notes']")

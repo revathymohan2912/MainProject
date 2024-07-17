@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendExpensePage {
 	
@@ -43,6 +44,7 @@ public class QaLegendExpensePage {
 	
 	public void searchExpense(String searchTitle) throws InterruptedException {
 		Thread.sleep(5000);
+	//	WaitUtility.waitForAnElementToBeVisible(driver, searchBox);
 		PageUtilities.clickUsingJavaScriptExecutor(searchBox, driver);
 		PageUtilities.enterText(searchBox, searchTitle);
 	}
