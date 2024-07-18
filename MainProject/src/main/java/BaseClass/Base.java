@@ -35,6 +35,8 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);		//implicit wait
 		return driver;
 	}
+	
+	
 	public String getSceenshotPath(String testcaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
