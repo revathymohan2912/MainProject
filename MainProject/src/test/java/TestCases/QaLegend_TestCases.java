@@ -34,6 +34,7 @@ import Utilities.WaitUtility;
 
 public class QaLegend_TestCases extends Base{
 	public WebDriver driver;
+	
 	Properties props;	
 	FileReader reader;
 	String path = "";
@@ -97,6 +98,16 @@ public class QaLegend_TestCases extends Base{
 		Assert.assertEquals(messagePage.getSendMessage(), message);
 		}
 
+@Test(retryAnalyzer = MyRetry.class)
+public void addTicket() throws InterruptedException {
+	loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
+	dashBoard.clickOnTickets();
+	String ticketTitle = props.getProperty("ticketTitle")+rand.nextInt(10000); 
+	ticketsPage.addTicket(ticketTitle, props.getProperty("ticketClient"), props.getProperty("ticketDescription"));
+	ticketsPage.searchTicket(ticketTitle);
+	Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
+}
+
 @Test(retryAnalyzer = MyRetry.class, groups = {"SmokeTest"})
 	public void searchNotes() throws InterruptedException {
 		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
@@ -127,16 +138,6 @@ public class QaLegend_TestCases extends Base{
 		expensePage.addNewExpense(props.getProperty("amount")+rand.nextInt(10000), expenseTitle);
 		expensePage.searchExpense(expenseTitle);
 		Assert.assertEquals(expensePage.getExpense(), expenseTitle);
-	}
-	
-@Test(retryAnalyzer = MyRetry.class)
-	public void addTicket() throws InterruptedException {
-		loginPage.loginToQaLegend(props.getProperty("username"), props.getProperty("password"));
-		dashBoard.clickOnTickets();
-		String ticketTitle = props.getProperty("ticketTitle")+rand.nextInt(10000); 
-		ticketsPage.addTicket(ticketTitle, props.getProperty("ticketClient"), props.getProperty("ticketDescription"));
-		ticketsPage.searchTicket(ticketTitle);
-		Assert.assertEquals(ticketsPage.getTicket(), ticketTitle);
 	}
 	
 @Test(retryAnalyzer = MyRetry.class, dataProvider = "myTickets")

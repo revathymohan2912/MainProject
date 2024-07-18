@@ -21,12 +21,12 @@
 		<!--<include name = "searchNotes"></include>-->
 		<!--<include name = "addEvents"></include>-->
 		<!--<include name = "composeMessage"></include>-->
-		<!--<include name = "addClients"></include>-->
+		<include name = "addClients"></include>
 		<!--<include name = "addProject"></include>-->
 		<!--<include name = "applyLeave"></include>-->
 		<!--<include name = "assignLeave"></include>-->
 		<!--<include name = "addExpense"></include>-->
-		<include name = "addTicket"></include>
+		<!--<include name = "addTicket"></include>-->
 		<!--<include name = "addTicket1"></include>-->
 		
 	  </methods>
